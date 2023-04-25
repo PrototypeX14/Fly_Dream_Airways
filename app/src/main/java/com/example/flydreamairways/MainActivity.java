@@ -19,13 +19,12 @@ import com.example.flydreamairways.databinding.ActivityMainBinding;
 public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration appBarConfiguration;
-    private ActivityMainBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        binding = ActivityMainBinding.inflate(getLayoutInflater());
+        com.example.flydreamairways.databinding.ActivityMainBinding binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
         setSupportActionBar(binding.toolbar);
@@ -76,6 +75,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void login_onClick(View v) {
-
+        Intent intent = new Intent(this, LoginActivity.class);
+        this.startActivity(intent);
     }
 }

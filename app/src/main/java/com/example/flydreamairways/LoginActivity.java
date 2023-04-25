@@ -6,13 +6,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.flydreamairways.databinding.ActivityMainBinding;
 
-public class Login extends AppCompatActivity {
-    private ActivityMainBinding binding;
+public class LoginActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = ActivityMainBinding.inflate(getLayoutInflater());
+        com.example.flydreamairways.databinding.ActivityMainBinding binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
     }
 }
